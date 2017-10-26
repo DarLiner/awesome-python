@@ -1,307 +1,1463 @@
+
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
         <meta name="description" content="A curated list of awesome Python frameworks, libraries and software">
+      
+      
+        <link rel="canonical" href="https://awesome-python.com/">
+      
+      
         <meta name="author" content="Vinta Chen">
-        <link rel="canonical" href="http://awesome-python.com/">
-        <link rel="shortcut icon" href="./img/favicon.ico">
-
-	<title>Awesome Python</title>
-
-        <link href="./css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="./css/font-awesome-4.0.3.css" rel="stylesheet">
-        <link rel="stylesheet" href="./css/highlight.css">
-        <link href="./css/base.css" rel="stylesheet">
-        <link href="./extra.css" rel="stylesheet">
-
-        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-        <![endif]-->
-
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.languages" content="">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      
+        <link rel="shortcut icon" href="./assets/images/favicon.png">
+      
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.12.1">
+    
+    
+      
+        <title>Awesome Python</title>
+      
+    
+    
+      <script src="./assets/javascripts/modernizr-e826f8942a.js"></script>
+    
+    
+      <link rel="stylesheet" href="./assets/stylesheets/application-04ea671600.css">
+      
+        <link rel="stylesheet" href="./assets/stylesheets/application-23f75ab9c7.palette.css">
+      
+    
+    
+      
         
-        <script>
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-            ga('create', 'UA-510626-7', 'auto');
-            ga('send', 'pageview');
-        </script>
         
-    </head>
-
-    <body>
-
-        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container">
-
-        <!-- Collapsed navigation -->
-        <div class="navbar-header">
-            <!-- Expander button -->
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-
-            <!-- Main title -->
-            <a class="navbar-brand" href=".">Awesome Python</a>
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+      <link rel="stylesheet" href="./extra.css">
+    
+    
+  </head>
+  
+  
+  
+  
+    <body data-md-color-primary="red" data-md-color-accent="pink">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://awesome-python.com" title="Awesome Python" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon md-icon--home"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+            
+            Life is short, you need Python.
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">&#xE5CD;</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
         </div>
-
-        <!-- Expanded navigation -->
-        <div class="navbar-collapse collapse">
-            <!-- Main navigation -->
-            <ul class="nav navbar-nav">
-            
-            
-                <li class="active">
-                    <a href=".">Life is short, you need Python.</a>
-                </li>
-            
-            
-            </ul>
-
-            <!-- Search, Navigation and Repo links -->
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
-                        <i class="fa fa-search"></i> Search
-                    </a>
-                </li>
-                <li class="disabled">
-                    <a rel="next" >
-                        <i class="fa fa-arrow-left"></i> Previous
-                    </a>
-                </li>
-                <li class="disabled">
-                    <a rel="prev" >
-                        Next <i class="fa fa-arrow-right"></i>
-                    </a>
-                </li>
-                
-                <li>
-                    <a href="https://github.com/vinta/awesome-python">
-                        
-                            <i class="fa fa-github"></i>
-                        
-                        GitHub
-                    </a>
-                </li>
-                
-            </ul>
-        </div>
+      </div>
     </div>
+  </div>
 </div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
 
-        <div class="container">
-            <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
-    <ul class="nav bs-sidenav">
+
+  
+
+
+  <a href="https://github.com/vinta/awesome-python" title="Go to repository" class="md-source" data-md-source="github">
     
-        <li class="main active"><a href="#awesome-python">Awesome Python</a></li>
-        
-            <li><a href="#admin-panels">Admin Panels</a></li>
-        
-            <li><a href="#algorithms-and-design-patterns">Algorithms and Design Patterns</a></li>
-        
-            <li><a href="#anti-spam">Anti-spam</a></li>
-        
-            <li><a href="#asset-management">Asset Management</a></li>
-        
-            <li><a href="#audio">Audio</a></li>
-        
-            <li><a href="#authentication">Authentication</a></li>
-        
-            <li><a href="#build-tools">Build Tools</a></li>
-        
-            <li><a href="#cms">CMS</a></li>
-        
-            <li><a href="#caching">Caching</a></li>
-        
-            <li><a href="#chatops-tools">ChatOps Tools</a></li>
-        
-            <li><a href="#code-analysis-and-linter">Code Analysis and Linter</a></li>
-        
-            <li><a href="#command-line-tools">Command-line Tools</a></li>
-        
-            <li><a href="#compatibility">Compatibility</a></li>
-        
-            <li><a href="#computer-vision">Computer Vision</a></li>
-        
-            <li><a href="#concurrency-and-parallelism">Concurrency and Parallelism</a></li>
-        
-            <li><a href="#configuration">Configuration</a></li>
-        
-            <li><a href="#cryptography">Cryptography</a></li>
-        
-            <li><a href="#data-analysis">Data Analysis</a></li>
-        
-            <li><a href="#data-validation">Data Validation</a></li>
-        
-            <li><a href="#data-visualization">Data Visualization</a></li>
-        
-            <li><a href="#database">Database</a></li>
-        
-            <li><a href="#database-drivers">Database Drivers</a></li>
-        
-            <li><a href="#date-and-time">Date and Time</a></li>
-        
-            <li><a href="#debugging-tools">Debugging Tools</a></li>
-        
-            <li><a href="#deep-learning">Deep Learning</a></li>
-        
-            <li><a href="#devops-tools">DevOps Tools</a></li>
-        
-            <li><a href="#distribution">Distribution</a></li>
-        
-            <li><a href="#documentation">Documentation</a></li>
-        
-            <li><a href="#downloader">Downloader</a></li>
-        
-            <li><a href="#e-commerce">E-commerce</a></li>
-        
-            <li><a href="#editor-plugins-and-ides">Editor Plugins and IDEs</a></li>
-        
-            <li><a href="#email">Email</a></li>
-        
-            <li><a href="#environment-management">Environment Management</a></li>
-        
-            <li><a href="#files">Files</a></li>
-        
-            <li><a href="#foreign-function-interface">Foreign Function Interface</a></li>
-        
-            <li><a href="#forms">Forms</a></li>
-        
-            <li><a href="#functional-programming">Functional Programming</a></li>
-        
-            <li><a href="#gui">GUI</a></li>
-        
-            <li><a href="#game-development">Game Development</a></li>
-        
-            <li><a href="#geolocation">Geolocation</a></li>
-        
-            <li><a href="#html-manipulation">HTML Manipulation</a></li>
-        
-            <li><a href="#http">HTTP</a></li>
-        
-            <li><a href="#hardware">Hardware</a></li>
-        
-            <li><a href="#imagery">Imagery</a></li>
-        
-            <li><a href="#implementations">Implementations</a></li>
-        
-            <li><a href="#interactive-interpreter">Interactive Interpreter</a></li>
-        
-            <li><a href="#internationalization">Internationalization</a></li>
-        
-            <li><a href="#job-scheduler">Job Scheduler</a></li>
-        
-            <li><a href="#logging">Logging</a></li>
-        
-            <li><a href="#machine-learning">Machine Learning</a></li>
-        
-            <li><a href="#mapreduce">MapReduce</a></li>
-        
-            <li><a href="#microsoft-windows">Microsoft Windows</a></li>
-        
-            <li><a href="#miscellaneous">Miscellaneous</a></li>
-        
-            <li><a href="#natural-language-processing">Natural Language Processing</a></li>
-        
-            <li><a href="#network-virtualization">Network Virtualization</a></li>
-        
-            <li><a href="#networking">Networking</a></li>
-        
-            <li><a href="#news-feed">News Feed</a></li>
-        
-            <li><a href="#orm">ORM</a></li>
-        
-            <li><a href="#package-management">Package Management</a></li>
-        
-            <li><a href="#package-repositories">Package Repositories</a></li>
-        
-            <li><a href="#permissions">Permissions</a></li>
-        
-            <li><a href="#processes">Processes</a></li>
-        
-            <li><a href="#queue">Queue</a></li>
-        
-            <li><a href="#restful-api">RESTful API</a></li>
-        
-            <li><a href="#rpc-servers">RPC Servers</a></li>
-        
-            <li><a href="#science">Science</a></li>
-        
-            <li><a href="#search">Search</a></li>
-        
-            <li><a href="#serialization">Serialization</a></li>
-        
-            <li><a href="#serverless-frameworks">Serverless Frameworks</a></li>
-        
-            <li><a href="#specific-formats-processing">Specific Formats Processing</a></li>
-        
-            <li><a href="#static-site-generator">Static Site Generator</a></li>
-        
-            <li><a href="#tagging">Tagging</a></li>
-        
-            <li><a href="#template-engine">Template Engine</a></li>
-        
-            <li><a href="#testing">Testing</a></li>
-        
-            <li><a href="#text-processing">Text Processing</a></li>
-        
-            <li><a href="#third-party-apis">Third-party APIs</a></li>
-        
-            <li><a href="#url-manipulation">URL Manipulation</a></li>
-        
-            <li><a href="#video">Video</a></li>
-        
-            <li><a href="#wsgi-servers">WSGI Servers</a></li>
-        
-            <li><a href="#web-content-extracting">Web Content Extracting</a></li>
-        
-            <li><a href="#web-crawling">Web Crawling</a></li>
-        
-            <li><a href="#web-frameworks">Web Frameworks</a></li>
-        
-            <li><a href="#websocket">WebSocket</a></li>
-        
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
     
-        <li class="main "><a href="#services">Services</a></li>
-        
-            <li><a href="#continuous-integration">Continuous Integration</a></li>
-        
-            <li><a href="#code-quality">Code Quality</a></li>
-        
+    <div class="md-source__repository">
+      vinta/awesome-python
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
     
-        <li class="main "><a href="#resources">Resources</a></li>
-        
-            <li><a href="#podcasts">Podcasts</a></li>
-        
-            <li><a href="#twitter">Twitter</a></li>
-        
-            <li><a href="#websites">Websites</a></li>
-        
-            <li><a href="#weekly">Weekly</a></li>
-        
+    <div class="md-container">
+      
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <i class="md-icon md-icon--home"></i>
+      
+    </span>
+    Awesome Python
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/vinta/awesome-python" title="Go to repository" class="md-source" data-md-source="github">
     
-        <li class="main "><a href="#other-awesome-lists">Other Awesome Lists</a></li>
-        
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
     
-        <li class="main "><a href="#contributing">Contributing</a></li>
-        
+    <div class="md-source__repository">
+      vinta/awesome-python
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
     
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Life is short, you need Python.
+      </label>
+    
+    <a href="." title="Life is short, you need Python." class="md-nav__link md-nav__link--active">
+      Life is short, you need Python.
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#admin-panels" title="Admin Panels" class="md-nav__link">
+    Admin Panels
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algorithms-and-design-patterns" title="Algorithms and Design Patterns" class="md-nav__link">
+    Algorithms and Design Patterns
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anti-spam" title="Anti-spam" class="md-nav__link">
+    Anti-spam
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#asset-management" title="Asset Management" class="md-nav__link">
+    Asset Management
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#audio" title="Audio" class="md-nav__link">
+    Audio
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authentication" title="Authentication" class="md-nav__link">
+    Authentication
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-tools" title="Build Tools" class="md-nav__link">
+    Build Tools
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cms" title="CMS" class="md-nav__link">
+    CMS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caching" title="Caching" class="md-nav__link">
+    Caching
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chatops-tools" title="ChatOps Tools" class="md-nav__link">
+    ChatOps Tools
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-analysis-and-linter" title="Code Analysis and Linter" class="md-nav__link">
+    Code Analysis and Linter
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#command-line-tools" title="Command-line Tools" class="md-nav__link">
+    Command-line Tools
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compatibility" title="Compatibility" class="md-nav__link">
+    Compatibility
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#computer-vision" title="Computer Vision" class="md-nav__link">
+    Computer Vision
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concurrency-and-parallelism" title="Concurrency and Parallelism" class="md-nav__link">
+    Concurrency and Parallelism
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" title="Configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cryptography" title="Cryptography" class="md-nav__link">
+    Cryptography
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-analysis" title="Data Analysis" class="md-nav__link">
+    Data Analysis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-validation" title="Data Validation" class="md-nav__link">
+    Data Validation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-visualization" title="Data Visualization" class="md-nav__link">
+    Data Visualization
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#database" title="Database" class="md-nav__link">
+    Database
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#database-drivers" title="Database Drivers" class="md-nav__link">
+    Database Drivers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#date-and-time" title="Date and Time" class="md-nav__link">
+    Date and Time
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debugging-tools" title="Debugging Tools" class="md-nav__link">
+    Debugging Tools
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deep-learning" title="Deep Learning" class="md-nav__link">
+    Deep Learning
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#devops-tools" title="DevOps Tools" class="md-nav__link">
+    DevOps Tools
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#distribution" title="Distribution" class="md-nav__link">
+    Distribution
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentation" title="Documentation" class="md-nav__link">
+    Documentation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#downloader" title="Downloader" class="md-nav__link">
+    Downloader
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#e-commerce" title="E-commerce" class="md-nav__link">
+    E-commerce
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#editor-plugins-and-ides" title="Editor Plugins and IDEs" class="md-nav__link">
+    Editor Plugins and IDEs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#email" title="Email" class="md-nav__link">
+    Email
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#environment-management" title="Environment Management" class="md-nav__link">
+    Environment Management
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#files" title="Files" class="md-nav__link">
+    Files
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#foreign-function-interface" title="Foreign Function Interface" class="md-nav__link">
+    Foreign Function Interface
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#forms" title="Forms" class="md-nav__link">
+    Forms
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functional-programming" title="Functional Programming" class="md-nav__link">
+    Functional Programming
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gui" title="GUI" class="md-nav__link">
+    GUI
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#game-development" title="Game Development" class="md-nav__link">
+    Game Development
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#geolocation" title="Geolocation" class="md-nav__link">
+    Geolocation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#html-manipulation" title="HTML Manipulation" class="md-nav__link">
+    HTML Manipulation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#http" title="HTTP" class="md-nav__link">
+    HTTP
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hardware" title="Hardware" class="md-nav__link">
+    Hardware
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#imagery" title="Imagery" class="md-nav__link">
+    Imagery
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementations" title="Implementations" class="md-nav__link">
+    Implementations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interactive-interpreter" title="Interactive Interpreter" class="md-nav__link">
+    Interactive Interpreter
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#internationalization" title="Internationalization" class="md-nav__link">
+    Internationalization
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#job-scheduler" title="Job Scheduler" class="md-nav__link">
+    Job Scheduler
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logging" title="Logging" class="md-nav__link">
+    Logging
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#machine-learning" title="Machine Learning" class="md-nav__link">
+    Machine Learning
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mapreduce" title="MapReduce" class="md-nav__link">
+    MapReduce
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#microsoft-windows" title="Microsoft Windows" class="md-nav__link">
+    Microsoft Windows
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#miscellaneous" title="Miscellaneous" class="md-nav__link">
+    Miscellaneous
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#natural-language-processing" title="Natural Language Processing" class="md-nav__link">
+    Natural Language Processing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#network-virtualization" title="Network Virtualization" class="md-nav__link">
+    Network Virtualization
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#networking" title="Networking" class="md-nav__link">
+    Networking
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#news-feed" title="News Feed" class="md-nav__link">
+    News Feed
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orm" title="ORM" class="md-nav__link">
+    ORM
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#package-management" title="Package Management" class="md-nav__link">
+    Package Management
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#package-repositories" title="Package Repositories" class="md-nav__link">
+    Package Repositories
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#permissions" title="Permissions" class="md-nav__link">
+    Permissions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#processes" title="Processes" class="md-nav__link">
+    Processes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#queue" title="Queue" class="md-nav__link">
+    Queue
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommender-systems" title="Recommender Systems" class="md-nav__link">
+    Recommender Systems
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#restful-api" title="RESTful API" class="md-nav__link">
+    RESTful API
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rpc-servers" title="RPC Servers" class="md-nav__link">
+    RPC Servers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#science" title="Science" class="md-nav__link">
+    Science
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#search" title="Search" class="md-nav__link">
+    Search
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#serialization" title="Serialization" class="md-nav__link">
+    Serialization
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#serverless-frameworks" title="Serverless Frameworks" class="md-nav__link">
+    Serverless Frameworks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#specific-formats-processing" title="Specific Formats Processing" class="md-nav__link">
+    Specific Formats Processing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#static-site-generator" title="Static Site Generator" class="md-nav__link">
+    Static Site Generator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tagging" title="Tagging" class="md-nav__link">
+    Tagging
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#template-engine" title="Template Engine" class="md-nav__link">
+    Template Engine
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing" title="Testing" class="md-nav__link">
+    Testing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#text-processing" title="Text Processing" class="md-nav__link">
+    Text Processing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#third-party-apis" title="Third-party APIs" class="md-nav__link">
+    Third-party APIs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#url-manipulation" title="URL Manipulation" class="md-nav__link">
+    URL Manipulation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#video" title="Video" class="md-nav__link">
+    Video
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wsgi-servers" title="WSGI Servers" class="md-nav__link">
+    WSGI Servers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web-content-extracting" title="Web Content Extracting" class="md-nav__link">
+    Web Content Extracting
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web-crawling" title="Web Crawling" class="md-nav__link">
+    Web Crawling
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web-frameworks" title="Web Frameworks" class="md-nav__link">
+    Web Frameworks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#websocket" title="WebSocket" class="md-nav__link">
+    WebSocket
+  </a>
+  
+</li>
+      
+      
+      
     </ul>
-</div></div>
-            <div class="col-md-9" role="main">
+  
+</nav>
+    
+  </li>
 
-<h1 id="awesome-python">Awesome Python <a href="https://github.com/sindresorhus/awesome"><img alt="Awesome" src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg" /></a></h1>
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#admin-panels" title="Admin Panels" class="md-nav__link">
+    Admin Panels
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algorithms-and-design-patterns" title="Algorithms and Design Patterns" class="md-nav__link">
+    Algorithms and Design Patterns
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anti-spam" title="Anti-spam" class="md-nav__link">
+    Anti-spam
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#asset-management" title="Asset Management" class="md-nav__link">
+    Asset Management
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#audio" title="Audio" class="md-nav__link">
+    Audio
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authentication" title="Authentication" class="md-nav__link">
+    Authentication
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-tools" title="Build Tools" class="md-nav__link">
+    Build Tools
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cms" title="CMS" class="md-nav__link">
+    CMS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caching" title="Caching" class="md-nav__link">
+    Caching
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chatops-tools" title="ChatOps Tools" class="md-nav__link">
+    ChatOps Tools
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-analysis-and-linter" title="Code Analysis and Linter" class="md-nav__link">
+    Code Analysis and Linter
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#command-line-tools" title="Command-line Tools" class="md-nav__link">
+    Command-line Tools
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compatibility" title="Compatibility" class="md-nav__link">
+    Compatibility
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#computer-vision" title="Computer Vision" class="md-nav__link">
+    Computer Vision
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concurrency-and-parallelism" title="Concurrency and Parallelism" class="md-nav__link">
+    Concurrency and Parallelism
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" title="Configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cryptography" title="Cryptography" class="md-nav__link">
+    Cryptography
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-analysis" title="Data Analysis" class="md-nav__link">
+    Data Analysis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-validation" title="Data Validation" class="md-nav__link">
+    Data Validation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-visualization" title="Data Visualization" class="md-nav__link">
+    Data Visualization
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#database" title="Database" class="md-nav__link">
+    Database
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#database-drivers" title="Database Drivers" class="md-nav__link">
+    Database Drivers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#date-and-time" title="Date and Time" class="md-nav__link">
+    Date and Time
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debugging-tools" title="Debugging Tools" class="md-nav__link">
+    Debugging Tools
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deep-learning" title="Deep Learning" class="md-nav__link">
+    Deep Learning
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#devops-tools" title="DevOps Tools" class="md-nav__link">
+    DevOps Tools
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#distribution" title="Distribution" class="md-nav__link">
+    Distribution
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentation" title="Documentation" class="md-nav__link">
+    Documentation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#downloader" title="Downloader" class="md-nav__link">
+    Downloader
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#e-commerce" title="E-commerce" class="md-nav__link">
+    E-commerce
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#editor-plugins-and-ides" title="Editor Plugins and IDEs" class="md-nav__link">
+    Editor Plugins and IDEs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#email" title="Email" class="md-nav__link">
+    Email
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#environment-management" title="Environment Management" class="md-nav__link">
+    Environment Management
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#files" title="Files" class="md-nav__link">
+    Files
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#foreign-function-interface" title="Foreign Function Interface" class="md-nav__link">
+    Foreign Function Interface
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#forms" title="Forms" class="md-nav__link">
+    Forms
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functional-programming" title="Functional Programming" class="md-nav__link">
+    Functional Programming
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gui" title="GUI" class="md-nav__link">
+    GUI
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#game-development" title="Game Development" class="md-nav__link">
+    Game Development
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#geolocation" title="Geolocation" class="md-nav__link">
+    Geolocation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#html-manipulation" title="HTML Manipulation" class="md-nav__link">
+    HTML Manipulation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#http" title="HTTP" class="md-nav__link">
+    HTTP
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hardware" title="Hardware" class="md-nav__link">
+    Hardware
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#imagery" title="Imagery" class="md-nav__link">
+    Imagery
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementations" title="Implementations" class="md-nav__link">
+    Implementations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interactive-interpreter" title="Interactive Interpreter" class="md-nav__link">
+    Interactive Interpreter
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#internationalization" title="Internationalization" class="md-nav__link">
+    Internationalization
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#job-scheduler" title="Job Scheduler" class="md-nav__link">
+    Job Scheduler
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logging" title="Logging" class="md-nav__link">
+    Logging
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#machine-learning" title="Machine Learning" class="md-nav__link">
+    Machine Learning
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mapreduce" title="MapReduce" class="md-nav__link">
+    MapReduce
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#microsoft-windows" title="Microsoft Windows" class="md-nav__link">
+    Microsoft Windows
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#miscellaneous" title="Miscellaneous" class="md-nav__link">
+    Miscellaneous
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#natural-language-processing" title="Natural Language Processing" class="md-nav__link">
+    Natural Language Processing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#network-virtualization" title="Network Virtualization" class="md-nav__link">
+    Network Virtualization
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#networking" title="Networking" class="md-nav__link">
+    Networking
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#news-feed" title="News Feed" class="md-nav__link">
+    News Feed
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orm" title="ORM" class="md-nav__link">
+    ORM
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#package-management" title="Package Management" class="md-nav__link">
+    Package Management
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#package-repositories" title="Package Repositories" class="md-nav__link">
+    Package Repositories
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#permissions" title="Permissions" class="md-nav__link">
+    Permissions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#processes" title="Processes" class="md-nav__link">
+    Processes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#queue" title="Queue" class="md-nav__link">
+    Queue
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommender-systems" title="Recommender Systems" class="md-nav__link">
+    Recommender Systems
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#restful-api" title="RESTful API" class="md-nav__link">
+    RESTful API
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rpc-servers" title="RPC Servers" class="md-nav__link">
+    RPC Servers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#science" title="Science" class="md-nav__link">
+    Science
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#search" title="Search" class="md-nav__link">
+    Search
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#serialization" title="Serialization" class="md-nav__link">
+    Serialization
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#serverless-frameworks" title="Serverless Frameworks" class="md-nav__link">
+    Serverless Frameworks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#specific-formats-processing" title="Specific Formats Processing" class="md-nav__link">
+    Specific Formats Processing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#static-site-generator" title="Static Site Generator" class="md-nav__link">
+    Static Site Generator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tagging" title="Tagging" class="md-nav__link">
+    Tagging
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#template-engine" title="Template Engine" class="md-nav__link">
+    Template Engine
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing" title="Testing" class="md-nav__link">
+    Testing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#text-processing" title="Text Processing" class="md-nav__link">
+    Text Processing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#third-party-apis" title="Third-party APIs" class="md-nav__link">
+    Third-party APIs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#url-manipulation" title="URL Manipulation" class="md-nav__link">
+    URL Manipulation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#video" title="Video" class="md-nav__link">
+    Video
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wsgi-servers" title="WSGI Servers" class="md-nav__link">
+    WSGI Servers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web-content-extracting" title="Web Content Extracting" class="md-nav__link">
+    Web Content Extracting
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web-crawling" title="Web Crawling" class="md-nav__link">
+    Web Crawling
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web-frameworks" title="Web Frameworks" class="md-nav__link">
+    Web Frameworks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#websocket" title="WebSocket" class="md-nav__link">
+    WebSocket
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="awesome-python">Awesome Python <a href="https://github.com/sindresorhus/awesome"><img alt="Awesome" src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg" /></a></h1>
 <p>A curated list of awesome Python frameworks, libraries, software and resources.</p>
 <p>Inspired by <a href="https://github.com/ziadoz/awesome-php">awesome-php</a>.</p>
 <ul>
@@ -368,6 +1524,7 @@
 <li><a href="#permissions">Permissions</a></li>
 <li><a href="#processes">Processes</a></li>
 <li><a href="#queue">Queue</a></li>
+<li><a href="#recommender-systems">Recommender Systems</a></li>
 <li><a href="#restful-api">RESTful API</a></li>
 <li><a href="#rpc-servers">RPC Servers</a></li>
 <li><a href="#science">Science</a></li>
@@ -438,7 +1595,7 @@
 <li><a href="https://github.com/jazzband/django-pipeline">django-pipeline</a> - An asset packaging library for Django.</li>
 <li><a href="https://github.com/jschneier/django-storages">django-storages</a> - A collection of custom storage back ends for Django.</li>
 <li><a href="http://www.fanstatic.org/en/latest/">fanstatic</a> - Packages, optimizes, and serves static file dependencies as Python packages.</li>
-<li><a href="http://fileconveyor.org/">fileconveyor</a> - A daemon to detect and sync files to CDNs, S3 and FTP.</li>
+<li><a href="http://wimleers.com/fileconveyor">fileconveyor</a> - A daemon to detect and sync files to CDNs, S3 and FTP.</li>
 <li><a href="https://github.com/miracle2k/flask-assets">flask-assets</a> - Helps you integrate webassets into your Flask app.</li>
 <li><a href="https://github.com/jaysonsantos/jinja-assets-compressor">jinja-assets-compressor</a> - A Jinja extension to compile and compress your assets.</li>
 <li><a href="https://github.com/miracle2k/webassets">webassets</a> - Bundles, optimizes, and manages unique cache-busting URLs for static resources.</li>
@@ -450,9 +1607,9 @@
 <li><a href="https://github.com/beetbox/audioread">audioread</a> - Cross-library (GStreamer + Core Audio + MAD + FFmpeg) audio decoding.</li>
 <li><a href="http://beets.io/">beets</a> - A music library manager and <a href="https://musicbrainz.org/">MusicBrainz</a> tagger.</li>
 <li><a href="https://github.com/worldveil/dejavu">dejavu</a> - Audio fingerprinting and recognition.</li>
-<li><a href="https://github.com/StreetVoice/django-elastic-transcoder">django-elastic-transcoder</a> - Django + <a href="http://aws.amazon.com/elastictranscoder/">Amazon Elastic Transcoder</a>.</li>
+<li><a href="https://github.com/StreetVoice/django-elastic-transcoder">django-elastic-transcoder</a> - Django + <a href="https://aws.amazon.com/elastictranscoder/">Amazon Elastic Transcoder</a>.</li>
 <li><a href="http://eyed3.nicfit.net/">eyeD3</a> - A tool for working with audio files, specifically MP3 files containing ID3 metadata.</li>
-<li><a href="http://nedbatchelder.com/code/modules/id3reader.py">id3reader</a> - A Python module for reading MP3 meta data.</li>
+<li><a href="https://nedbatchelder.com/code/modules/id3reader.py">id3reader</a> - A Python module for reading MP3 meta data.</li>
 <li><a href="https://github.com/globocom/m3u8">m3u8</a> - A module for parsing m3u8 file.</li>
 <li><a href="http://bspaans.github.io/python-mingus/">mingus</a> - An advanced music theory and notation package with MIDI file and playback support.</li>
 <li><a href="https://github.com/quodlibet/mutagen">mutagen</a> - A Python module to handle audio metadata.</li>
@@ -467,7 +1624,7 @@
 <p><em>Libraries for implementing authentications schemes.</em></p>
 <ul>
 <li>OAuth<ul>
-<li><a href="http://peterhudec.github.io/authomatic/">Authomatic</a> - Simple but powerful framework agnostic authentication/authorization client.</li>
+<li><a href="https://github.com/authomatic/authomatic">Authomatic</a> - Simple but powerful framework agnostic authentication/authorization client.</li>
 <li><a href="https://github.com/pennersr/django-allauth">django-allauth</a> - Authentication app for Django that "just works."</li>
 <li><a href="https://github.com/evonove/django-oauth-toolkit">django-oauth-toolkit</a> - OAuth 2 goodies for Django.</li>
 <li><a href="https://github.com/lepture/flask-oauthlib">Flask-OAuthlib</a> - OAuth 1.0/a, 2.0 implementation of client and provider for Flask.</li>
@@ -491,14 +1648,14 @@
 <ul>
 <li><a href="http://www.yoctoproject.org/docs/1.6/bitbake-user-manual/bitbake-user-manual.html">BitBake</a> - A make-like build tool for embedded Linux.</li>
 <li><a href="http://www.buildout.org/en/latest/">buildout</a> - A build system for creating, assembling and deploying applications from multiple parts.</li>
-<li><a href="https://github.com/platformio/platformio">PlatformIO</a> - A console tool to build code with different development platforms.</li>
+<li><a href="https://github.com/platformio/platformio-core">PlatformIO</a> - A console tool to build code with different development platforms.</li>
 <li><a href="https://github.com/pybuilder/pybuilder">PyBuilder</a> - A continuous build tool written in pure Python.</li>
 <li><a href="http://www.scons.org/">SCons</a> - A software construction tool.</li>
 </ul>
 <h2 id="cms">CMS</h2>
 <p><em>Content Management Systems.</em></p>
 <ul>
-<li><a href="http://www.django-cms.org/en/">django-cms</a> - An Open source enterprise CMS based on the Django.</li>
+<li><a href="https://www.django-cms.org/en/">django-cms</a> - An Open source enterprise CMS based on the Django.</li>
 <li><a href="http://djedi-cms.org/">djedi-cms</a> - A lightweight but yet powerful Django CMS with plugins, inline editing and performance in mind.</li>
 <li><a href="http://www.feincms.org/">FeinCMS</a> - One of the most advanced Content Management Systems built on Django.</li>
 <li><a href="http://kotti.pylonsproject.org/">Kotti</a> - A high-level, Pythonic web application framework built on Pyramid.</li>
@@ -517,7 +1674,7 @@
 <li><a href="https://github.com/django-cache-machine/django-cache-machine">django-cache-machine</a> - Automatic caching and invalidation for Django models.</li>
 <li><a href="https://github.com/Suor/django-cacheops">django-cacheops</a> - A slick ORM cache with automatic granular event-driven invalidation.</li>
 <li><a href="https://github.com/5monkeys/django-viewlet">django-viewlet</a> - Render template parts with extended cache control.</li>
-<li><a href="http://dogpilecache.readthedocs.io/">dogpile.cache</a> - dogpile.cache is next generation replacement for Beaker made by same authors.</li>
+<li><a href="http://dogpilecache.readthedocs.io/en/latest/">dogpile.cache</a> - dogpile.cache is next generation replacement for Beaker made by same authors.</li>
 <li><a href="https://pypi.python.org/pypi/HermesCache">HermesCache</a> - Python caching library with tag-based invalidation and dogpile effect prevention.</li>
 <li><a href="https://github.com/jmoiron/johnny-cache">johnny-cache</a> - A caching framework for django applications.</li>
 <li><a href="https://github.com/lericson/pylibmc">pylibmc</a> - A Python wrapper around the <a href="http://libmemcached.org/libMemcached.html">libmemcached</a> interface.</li>
@@ -525,22 +1682,25 @@
 <h2 id="chatops-tools">ChatOps Tools</h2>
 <p><em>Libraries for chatbot development.</em></p>
 <ul>
-<li><a href="http://errbot.io/">Errbot</a> - The easiest and most popular chatbot to implement ChatOps.</li>
+<li><a href="http://errbot.io/en/latest/">Errbot</a> - The easiest and most popular chatbot to implement ChatOps.</li>
 </ul>
 <h2 id="code-analysis-and-linter">Code Analysis and Linter</h2>
 <p><em>Libraries and tools for analysing, parsing and manipulation codebases.</em></p>
 <ul>
 <li>Code Analysis<ul>
-<li><a href="http://coala-analyzer.org/">coala</a> - Language independent and easily extendable code analysis application.</li>
+<li><a href="http://coala.io/">coala</a> - Language independent and easily extendable code analysis application.</li>
 <li><a href="https://github.com/scottrogowski/code2flow">code2flow</a> - Turn your Python and JavaScript code into DOT flowcharts.</li>
 <li><a href="https://github.com/gak/pycallgraph">pycallgraph</a> - A library that visualises the flow (call graph) of your Python application.</li>
-<li><a href="https://github.com/yinwang0/pysonar2">pysonar2</a> - A type inferencer and indexer for Python.</li>
 </ul>
 </li>
 <li>Linter<ul>
 <li><a href="https://pypi.python.org/pypi/flake8">Flake8</a> - The modular source code checker: pep8, pyflakes and co.</li>
 <li><a href="https://github.com/klen/pylama">pylama</a> - Code audit tool for Python and JavaScript.</li>
 <li><a href="https://www.pylint.org/">Pylint</a> - A Fully customizable source code analyzer.</li>
+</ul>
+</li>
+<li>Static Type Checker<ul>
+<li><a href="http://mypy-lang.org/">mypy</a> - Check variable types during compile time.</li>
 </ul>
 </li>
 </ul>
@@ -551,7 +1711,7 @@
 <li><a href="https://github.com/peterbrittain/asciimatics">asciimatics</a> - Cross-platform, full-screen terminal package (i.e.  mouse/keyboard input and coloured, positioned text output) complete with high-level API for complex animations and special effects.</li>
 <li><a href="http://builtoncement.com/">cement</a> - CLI Application Framework for Python.</li>
 <li><a href="http://click.pocoo.org/dev/">click</a> - A package for creating beautiful command line interfaces in a composable way.</li>
-<li><a href="http://docs.openstack.org/developer/cliff/">cliff</a> - A framework for creating command-line programs with multi-level commands.</li>
+<li><a href="https://docs.openstack.org/developer/cliff/">cliff</a> - A framework for creating command-line programs with multi-level commands.</li>
 <li><a href="https://github.com/kennethreitz/clint">clint</a> - Python Command-line Application Tools.</li>
 <li><a href="https://pypi.python.org/pypi/colorama">colorama</a> - Cross-platform colored terminal text.</li>
 <li><a href="http://docopt.org/">docopt</a> - Pythonic command line arguments parser.</li>
@@ -567,7 +1727,7 @@
 <li><a href="https://github.com/audreyr/cookiecutter">cookiecutter</a> - A command-line utility that creates projects from cookiecutters (project templates).</li>
 <li><a href="https://github.com/sloria/doitlive">doitlive</a> - A tool for live presentations in the terminal.</li>
 <li><a href="https://github.com/gleitz/howdoi">howdoi</a> - Instant coding answers via the command line.</li>
-<li><a href="https://github.com/jkbrzt/httpie">httpie</a> - A command line HTTP client, a user-friendly cURL replacement.</li>
+<li><a href="https://github.com/jakubroztocil/httpie">httpie</a> - A command line HTTP client, a user-friendly cURL replacement.</li>
 <li><a href="https://github.com/dbcli/mycli">mycli</a> - A Terminal Client for MySQL with AutoCompletion and Syntax Highlighting.</li>
 <li><a href="https://github.com/facebook/PathPicker">PathPicker</a> - Select files out of bash output.</li>
 <li><a href="https://github.com/mooz/percol">percol</a> - Adds flavor of interactive selection to the traditional pipe concept on UNIX.</li>
@@ -589,7 +1749,7 @@
 <p><em>Libraries for computer vision.</em></p>
 <ul>
 <li><a href="http://opencv.org/">OpenCV</a> - Open Source Computer Vision Library.</li>
-<li><a href="https://github.com/jflesch/pyocr">pyocr</a> - A wrapper for Tesseract and Cuneiform.</li>
+<li><a href="https://github.com/openpaperwork/pyocr">pyocr</a> - A wrapper for Tesseract and Cuneiform.</li>
 <li><a href="https://github.com/madmaze/pytesseract">pytesseract</a> - Another wrapper for <a href="https://github.com/tesseract-ocr">Google Tesseract OCR</a>.</li>
 <li><a href="http://simplecv.org/">SimpleCV</a> - An open source framework for building computer vision applications.</li>
 </ul>
@@ -625,14 +1785,14 @@
 <ul>
 <li><a href="https://github.com/blaze/blaze">Blaze</a> - NumPy and Pandas interface to Big Data.</li>
 <li><a href="https://github.com/mining/mining">Open Mining</a> - Business Intelligence (BI) in Pandas interface.</li>
-<li><a href="http://orange.biolab.si/">Orange</a> - Data mining, data visualization, analysis and machine learning through visual programming or scripts.</li>
+<li><a href="https://orange.biolab.si/">Orange</a> - Data mining, data visualization, analysis and machine learning through visual programming or scripts.</li>
 <li><a href="http://pandas.pydata.org/">Pandas</a> - A library providing high-performance, easy-to-use data structures and data analysis tools.</li>
 </ul>
 <h2 id="data-validation">Data Validation</h2>
 <p><em>Libraries for validating data. Used for forms in many cases.</em></p>
 <ul>
-<li><a href="https://github.com/nicolaiarocci/cerberus/">Cerberus</a> - A lightweight and extensible data validation library.</li>
-<li><a href="http://docs.pylonsproject.org/projects/colander/en/latest/">colander</a> - Validating and deserializing data obtained via XML, JSON, an HTML form post.</li>
+<li><a href="https://github.com/pyeve/cerberus">Cerberus</a> - A lightweight and extensible data validation library.</li>
+<li><a href="https://docs.pylonsproject.org/projects/colander/en/latest/">colander</a> - Validating and deserializing data obtained via XML, JSON, an HTML form post.</li>
 <li><a href="https://github.com/Julian/jsonschema">jsonschema</a> - An implementation of <a href="http://json-schema.org/">JSON Schema</a> for Python.</li>
 <li><a href="https://github.com/keleshev/schema">schema</a> - A library for validating Python data structures.</li>
 <li><a href="https://github.com/schematics/schematics">Schematics</a> - Data Structure Validation.</li>
@@ -644,7 +1804,7 @@
 <ul>
 <li><a href="https://github.com/altair-viz/altair">Altair</a> - Declarative statistical visualization library for Python.</li>
 <li><a href="https://github.com/bokeh/bokeh">Bokeh</a> - Interactive Web Plotting for Python.</li>
-<li><a href="https://github.com/yhat/ggplot">ggplot</a> - Same API as ggplot2 for R.</li>
+<li><a href="https://github.com/yhat/ggpy">ggplot</a> - Same API as ggplot2 for R.</li>
 <li><a href="http://matplotlib.org/">Matplotlib</a> - A Python 2D plotting library.</li>
 <li><a href="http://www.pygal.org/en/latest/">Pygal</a> - A Python SVG Charts Creator.</li>
 <li><a href="https://pypi.python.org/pypi/pygraphviz">PyGraphviz</a> - Python interface to <a href="http://www.graphviz.org/">Graphviz</a>.</li>
@@ -688,7 +1848,7 @@
 <li><a href="https://github.com/wbolster/plyvel">Plyvel</a> - A fast and feature-rich Python interface to LevelDB.</li>
 <li><a href="http://py2neo.org/2.0/">py2neo</a> - Python wrapper client for Neo4j's restful interface.</li>
 <li><a href="https://github.com/pycassa/pycassa">pycassa</a> - Python Thrift driver for Cassandra.</li>
-<li><a href="https://docs.mongodb.org/ecosystem/drivers/python/">PyMongo</a> - The official Python client for MongoDB.</li>
+<li><a href="https://docs.mongodb.com/ecosystem/drivers/python/">PyMongo</a> - The official Python client for MongoDB.</li>
 <li><a href="https://github.com/andymccurdy/redis-py">redis-py</a> - The Redis Python Client.</li>
 <li><a href="https://github.com/driftx/Telephus">telephus</a> - Twisted based client for Cassandra.</li>
 <li><a href="https://github.com/deldotdr/txRedis">txRedis</a> - Twisted based client for Redis.</li>
@@ -727,7 +1887,7 @@
 </ul>
 </li>
 <li>Others<ul>
-<li><a href="https://github.com/django-debug-toolbar/django-debug-toolbar">django-debug-toolbar</a> - Display various debug information for Django.</li>
+<li><a href="https://github.com/jazzband/django-debug-toolbar">django-debug-toolbar</a> - Display various debug information for Django.</li>
 <li><a href="https://github.com/dcramer/django-devserver">django-devserver</a> - A drop-in replacement for Django's runserver.</li>
 <li><a href="https://github.com/mgood/flask-debugtoolbar">flask-debugtoolbar</a> - A port of the django-debug-toolbar to flask.</li>
 <li><a href="https://github.com/ionelmc/python-hunter">hunter</a> - Hunter is a flexible code tracing toolkit.</li>
@@ -753,13 +1913,13 @@
 <p><em>Software and libraries for DevOps.</em></p>
 <ul>
 <li><a href="https://github.com/ansible/ansible">Ansible</a> - A radically simple IT automation platform.</li>
-<li><a href="http://cloudinit.readthedocs.io/">Cloud-Init</a> - A multi-distribution package that handles early initialization of a cloud instance.</li>
+<li><a href="http://cloudinit.readthedocs.io/en/latest/">Cloud-Init</a> - A multi-distribution package that handles early initialization of a cloud instance.</li>
 <li><a href="https://github.com/sebastien/cuisine">cuisine</a> - Chef-like functionality for Fabric.</li>
 <li><a href="https://docs.docker.com/compose/">Docker Compose</a> - Fast, isolated development environments using <a href="https://www.docker.com/">Docker</a>.</li>
 <li><a href="http://www.fabfile.org/">Fabric</a> - A simple, Pythonic tool for remote execution and deployment.</li>
-<li><a href="https://github.com/ronnix/fabtools">Fabtools</a> - Tools for writing awesome Fabric files.</li>
+<li><a href="https://github.com/fabtools/fabtools">Fabtools</a> - Tools for writing awesome Fabric files.</li>
 <li><a href="https://github.com/nickstenning/honcho">honcho</a> - A Python clone of <a href="https://github.com/ddollar/foreman">Foreman</a>, for managing Procfile-based applications.</li>
-<li><a href="http://www.openstack.org/">OpenStack</a> - Open source software for building private and public clouds.</li>
+<li><a href="https://www.openstack.org/">OpenStack</a> - Open source software for building private and public clouds.</li>
 <li><a href="https://github.com/pexpect/pexpect">pexpect</a> - Controlling interactive programs in a pseudo-terminal like GNU expect.</li>
 <li><a href="https://github.com/giampaolo/psutil">psutil</a> - A cross-platform process and system utilities module.</li>
 <li><a href="https://github.com/saltstack/salt">SaltStack</a> - Infrastructure automation and management system.</li>
@@ -773,7 +1933,7 @@
 <li><a href="http://pythonhosted.org/py2app/">py2app</a> - Freezes Python scripts (Mac OS X).</li>
 <li><a href="http://www.py2exe.org/">py2exe</a> - Freezes Python scripts (Windows).</li>
 <li><a href="https://github.com/pyinstaller/pyinstaller">PyInstaller</a> - Converts Python programs into stand-alone executables (cross-platform).</li>
-<li><a href="http://pynsist.readthedocs.io/">pynsist</a> - A tool to build Windows installers, installers bundle Python itself.</li>
+<li><a href="http://pynsist.readthedocs.io/en/latest/">pynsist</a> - A tool to build Windows installers, installers bundle Python itself.</li>
 </ul>
 <h2 id="documentation">Documentation</h2>
 <p><em>Libraries for generating project documentation.</em></p>
@@ -791,7 +1951,7 @@
 <ul>
 <li><a href="https://github.com/s3tools/s3cmd">s3cmd</a> - A command line tool for managing Amazon S3 and CloudFront.</li>
 <li><a href="https://github.com/bloomreach/s4cmd">s4cmd</a> - Super S3 command line tool, good for higher performance.</li>
-<li><a href="https://www.soimort.org/you-get/">you-get</a> - A YouTube/Youku/Niconico video downloader written in Python 3.</li>
+<li><a href="http://you-get.org/">you-get</a> - A YouTube/Youku/Niconico video downloader written in Python 3.</li>
 <li><a href="http://rg3.github.io/youtube-dl/">youtube-dl</a> - A small command-line program to download videos from YouTube.</li>
 </ul>
 <h2 id="e-commerce">E-commerce</h2>
@@ -805,7 +1965,7 @@
 <li><a href="https://github.com/carlospalol/money">money</a> - Money class with optional CLDR-backed locale-aware formatting and an extensible currency exchange solution.</li>
 <li><a href="https://github.com/Alir3z4/python-currencies">python-currencies</a> - Display money format and its filthy currencies.</li>
 <li><a href="https://github.com/MicroPyramid/forex-python">forex-python</a> - Foreign exchange rates, Bitcoin price index and currency conversion.</li>
-<li><a href="https://www.shoop.io/en/">shoop</a> - An open source E-Commerce platform based on Django.</li>
+<li><a href="https://www.shuup.com/en/">shoop</a> - An open source E-Commerce platform based on Django.</li>
 </ul>
 <h2 id="editor-plugins-and-ides">Editor Plugins and IDEs</h2>
 <ul>
@@ -820,7 +1980,7 @@
 </li>
 <li>Vim<ul>
 <li><a href="https://github.com/davidhalter/jedi-vim">Jedi-vim</a> - Vim bindings for the Jedi auto-completion library for Python.</li>
-<li><a href="https://github.com/klen/python-mode">Python-mode</a> - An all in one plugin for turning Vim into a Python IDE.</li>
+<li><a href="https://github.com/python-mode/python-mode">Python-mode</a> - An all in one plugin for turning Vim into a Python IDE.</li>
 <li><a href="https://github.com/Valloric/YouCompleteMe">YouCompleteMe</a> - Includes <a href="https://github.com/davidhalter/jedi">Jedi</a>-based completion engine for Python.</li>
 </ul>
 </li>
@@ -849,15 +2009,16 @@
 <li><a href="https://github.com/kennethreitz/inbox.py">inbox.py</a> - Python SMTP Server for Humans.</li>
 <li><a href="https://github.com/zedshaw/lamson">lamson</a> - Pythonic SMTP Application Server.</li>
 <li><a href="https://github.com/marrow/mailer">Marrow Mailer</a> - High-performance extensible mail delivery framework.</li>
-<li><a href="https://github.com/tonioo/modoboa">modoboa</a> - A mail hosting and management platform including a modern and simplified Web UI.</li>
+<li><a href="https://github.com/modoboa/modoboa">modoboa</a> - A mail hosting and management platform including a modern and simplified Web UI.</li>
 <li><a href="https://github.com/nylas/sync-engine">Nylas Sync Engine</a> - Providing a RESTful API on top of a powerful email sync platform.</li>
 <li><a href="https://github.com/kootenpv/yagmail">yagmail</a> - Yet another Gmail/SMTP client.</li>
 </ul>
 <h2 id="environment-management">Environment Management</h2>
 <p><em>Libraries for Python version and environment management.</em></p>
 <ul>
+<li><a href="https://github.com/kennethreitz/pipenv">Pipenv</a> - Sacred Marriage of Pipfile, Pip, &amp; Virtualenv.</li>
 <li><a href="https://github.com/qw3rtman/p">p</a> - Dead simple interactive Python version management.</li>
-<li><a href="https://github.com/yyuu/pyenv">pyenv</a> - Simple Python version management.</li>
+<li><a href="https://github.com/pyenv/pyenv">pyenv</a> - Simple Python version management.</li>
 <li><a href="https://docs.python.org/3/library/venv.html">venv</a> - (Python standard library in Python 3.3+) Creating lightweight virtual environments.</li>
 <li><a href="https://pypi.python.org/pypi/virtualenv">virtualenv</a> - A tool to create isolated Python environments.</li>
 <li><a href="https://pypi.python.org/pypi/virtualenvwrapper">virtualenvwrapper</a> - A set of extensions to virtualenv.</li>
@@ -886,7 +2047,7 @@
 <ul>
 <li><a href="https://github.com/Pylons/deform">Deform</a> - Python HTML form generation library influenced by the formish form generation library.</li>
 <li><a href="https://github.com/dyve/django-bootstrap3">django-bootstrap3</a> - Bootstrap 3 integration with Django.</li>
-<li><a href="https://github.com/maraujop/django-crispy-forms">django-crispy-forms</a> - A Django app which lets you create beautiful forms in a very elegant and DRY way.</li>
+<li><a href="https://github.com/django-crispy-forms/django-crispy-forms">django-crispy-forms</a> - A Django app which lets you create beautiful forms in a very elegant and DRY way.</li>
 <li><a href="https://github.com/WiserTogether/django-remote-forms">django-remote-forms</a> - A platform independent Django form serializer.</li>
 <li><a href="https://github.com/wtforms/wtforms">WTForms</a> - A flexible forms validation and rendering library.</li>
 </ul>
@@ -907,13 +2068,13 @@
 <li><a href="https://kivy.org/">kivy</a> - A library for creating NUI applications, running on Windows, Linux, Mac OS X, Android and iOS.</li>
 <li><a href="https://bitbucket.org/pyglet/pyglet/wiki/Home">pyglet</a> - A cross-platform windowing and multimedia library for Python.</li>
 <li><a href="https://wiki.gnome.org/Projects/PyGObject">PyGObject</a> - Python Bindings for GLib/GObject/GIO/GTK+ (GTK+3)</li>
-<li><a href="https://riverbankcomputing.com/software/pyqt/intro">PyQt</a> - Python bindings for the <a href="http://www.qt.io/">Qt</a> cross-platform application and UI framework, with support for both Qt v4 and Qt v5 frameworks.</li>
+<li><a href="https://riverbankcomputing.com/software/pyqt/intro">PyQt</a> - Python bindings for the <a href="https://www.qt.io/">Qt</a> cross-platform application and UI framework, with support for both Qt v4 and Qt v5 frameworks.</li>
 <li><a href="https://wiki.qt.io/PySide">PySide</a> - Python bindings for the <a href="http://www.qt.io/">Qt</a> cross-platform application and UI framework, supporting the Qt v4 framework.</li>
 <li><a href="https://github.com/r0x0r/pywebview/">pywebview</a> - A lightweight cross-platform native wrapper around a webview component that allows to display HTML content in its own native dedicated window</li>
 <li><a href="https://wiki.python.org/moin/TkInter">Tkinter</a> - Tkinter is Python's de-facto standard GUI package.</li>
 <li><a href="https://github.com/pybee/toga">Toga</a> - A Python native, OS native GUI toolkit.</li>
 <li><a href="http://urwid.org/">urwid</a> - A library for creating terminal GUI applications with strong support for widgets, events, rich colors, etc.</li>
-<li><a href="http://wxpython.org/">wxPython</a> - A blending of the wxWidgets C++ class library with the Python.</li>
+<li><a href="https://wxpython.org/">wxPython</a> - A blending of the wxWidgets C++ class library with the Python.</li>
 </ul>
 <h2 id="game-development">Game Development</h2>
 <p><em>Awesome game development libraries.</em></p>
@@ -923,7 +2084,7 @@
 <li><a href="http://www.pygame.org/news.html">Pygame</a> - Pygame is a set of Python modules designed for writing games.</li>
 <li><a href="http://www.ogre3d.org/tikiwiki/PyOgre">PyOgre</a> - Python bindings for the Ogre 3D render engine, can be used for games, simulations, anything 3D.</li>
 <li><a href="http://pyopengl.sourceforge.net/">PyOpenGL</a> - Python ctypes bindings for OpenGL and it's related APIs.</li>
-<li><a href="http://pysdl2.readthedocs.io/">PySDL2</a> - A ctypes based wrapper for the SDL2 library.</li>
+<li><a href="http://pysdl2.readthedocs.io/en/rel_0_9_5/">PySDL2</a> - A ctypes based wrapper for the SDL2 library.</li>
 <li><a href="https://www.renpy.org/">RenPy</a> - A Visual Novel engine.</li>
 </ul>
 <h2 id="geolocation">Geolocation</h2>
@@ -948,7 +2109,7 @@
 <li><a href="https://github.com/gawel/pyquery">pyquery</a> - A jQuery-like library for parsing HTML.</li>
 <li><a href="https://github.com/stchris/untangle">untangle</a> - Converts XML documents to Python objects for easy access.</li>
 <li><a href="http://weasyprint.org">WeasyPrint</a> - A visual rendering engine for HTML and CSS that can export to PDF.</li>
-<li><a href="https://xmldataset.readthedocs.io">xmldataset</a> - Simple XML Parsing.</li>
+<li><a href="https://xmldataset.readthedocs.io/en/latest/">xmldataset</a> - Simple XML Parsing.</li>
 <li><a href="https://github.com/martinblech/xmltodict">xmltodict</a> - Working with XML feel like you are working with JSON.</li>
 </ul>
 <h2 id="http">HTTP</h2>
@@ -964,6 +2125,8 @@
 <p><em>Libraries for programming with hardware.</em></p>
 <ul>
 <li><a href="http://inotool.org/">ino</a> - Command line toolkit for working with <a href="https://www.arduino.cc/">Arduino</a>.</li>
+<li><a href="https://github.com/boppreh/keyboard">keyboard</a> - Hook and simulate global keyboard events on Windows and Linux.</li>
+<li><a href="https://github.com/boppreh/mouse">mouse</a> - Hook and simulate global mouse events on Windows and Linux.</li>
 <li><a href="http://www.pingo.io/">Pingo</a> - Pingo provides a uniform API to program devices like the Raspberry Pi, pcDuino, Intel Galileo, etc.</li>
 <li><a href="http://pyrorobotics.com/">Pyro</a> - Python Robotics.</li>
 <li><a href="https://github.com/SavinaRoja/PyUserInput">PyUserInput</a> - A module for cross-platform control of the mouse and keyboard.</li>
@@ -990,7 +2153,8 @@
 <p><em>Implementations of Python.</em></p>
 <ul>
 <li><a href="https://github.com/metawilm/cl-python">CLPython</a> - Implementation of the Python programming language written in Common Lisp.</li>
-<li><a href="https://github.com/python/cpython">CPython</a> - <strong>Default, most widely used implementation of the Python programming language written in C.</strong> Optimizing Static Compiler for Python. Uses type mixins to compile Python into C or C++ modules resulting in large performance gains.</li>
+<li><a href="https://github.com/python/cpython">CPython</a> - <strong>Default, most widely used implementation of the Python programming language written in C.</strong></li>
+<li><a href="http://cython.org/">Cython</a> - Optimizing Static Compiler for Python. Uses type mixins to compile Python into C or C++ modules resulting in large performance gains</li>
 <li><a href="http://grump.io">Grumpy</a> - More compiler than interpreter as more powerful CPython2.7 replacement (alpha).</li>
 <li><a href="https://github.com/IronLanguages/ironpython3">IronPython</a> - Implementation of the Python programming language written in C# targeting the .NET Framework and Mono.</li>
 <li><a href="https://hg.python.org/jython">Jython</a> - Implementation of Python programming language written in Java for the Java virtual machine (JVM).</li>
@@ -1019,7 +2183,7 @@
 <h2 id="job-scheduler">Job Scheduler</h2>
 <p><em>Libraries for scheduling jobs.</em></p>
 <ul>
-<li><a href="http://apscheduler.readthedocs.io/">APScheduler</a> - A light but powerful in-process task scheduler that lets you schedule functions.</li>
+<li><a href="http://apscheduler.readthedocs.io/en/latest/">APScheduler</a> - A light but powerful in-process task scheduler that lets you schedule functions.</li>
 <li><a href="https://github.com/thauber/django-schedule">django-schedule</a> - A calendaring app for Django.</li>
 <li><a href="http://pydoit.org/">doit</a> - A task runner and build tool.</li>
 <li><a href="https://github.com/gunnery/gunnery">gunnery</a> - Multipurpose task execution tool for distributed systems with web-based interface.</li>
@@ -1027,38 +2191,34 @@
 <li><a href="https://github.com/fengsp/plan">Plan</a> - Writing crontab file in Python like a charm.</li>
 <li><a href="https://github.com/dbader/schedule">schedule</a> - Python job scheduling for humans.</li>
 <li><a href="https://github.com/knipknap/SpiffWorkflow">Spiff</a> - A powerful workflow engine implemented in pure Python.</li>
-<li><a href="http://docs.openstack.org/developer/taskflow/">TaskFlow</a> - A Python library that helps to make task execution easy, consistent and reliable.</li>
+<li><a href="https://docs.openstack.org/developer/taskflow/">TaskFlow</a> - A Python library that helps to make task execution easy, consistent and reliable.</li>
 </ul>
 <h2 id="logging">Logging</h2>
 <p><em>Libraries for generating and working with logs.</em></p>
 <ul>
-<li><a href="https://github.com/ClusterHQ/eliot">Eliot</a> - Logging for complex &amp; distributed systems.</li>
+<li><a href="https://github.com/ScatterHQ/eliot">Eliot</a> - Logging for complex &amp; distributed systems.</li>
 <li><a href="http://logbook.readthedocs.io/en/stable/">logbook</a> - Logging replacement for Python.</li>
 <li><a href="https://docs.python.org/2/library/logging.html">logging</a> - (Python standard library) Logging facility for Python.</li>
-<li><a href="https://github.com/getsentry/raven-python">Raven</a> - The Python client for Sentry.</li>
 <li><a href="https://pypi.python.org/pypi/sentry">Sentry</a> - A realtime logging and aggregation server.</li>
 </ul>
 <h2 id="machine-learning">Machine Learning</h2>
 <p><em>Libraries for Machine Learning. See: <a href="https://github.com/josephmisiti/awesome-machine-learning#python">awesome-machine-learning</a>.</em></p>
 <ul>
-<li><a href="https://github.com/piskvorky/gensim">gensim</a> - Topic Modelling for Humans.</li>
-<li><a href="https://github.com/lyst/lightfm">LightFM</a> - A Python implementation of a number of popular recommendation algorithms.</li>
-<li><a href="http://spark.apache.org/mllib/">MLlib</a> - <a href="http://spark.apache.org/">Apache Spark</a>'s scalable Machine Learning library.</li>
+<li><a href="https://github.com/dmlc/xgboost">Metrics</a> - Machine learning evaluation metrics.</li>
 <li><a href="https://github.com/numenta/nupic">NuPIC</a> - Numenta Platform for Intelligent Computing.</li>
 <li><a href="http://scikit-learn.org/">scikit-learn</a> - The most popular Python library for Machine Learning.</li>
-<li><a href="http://surpriselib.com">surprise</a> - A scikit for building and analyzing recommender systems.</li>
+<li><a href="http://spark.apache.org/docs/latest/ml-guide.html">Spark ML</a> - <a href="http://spark.apache.org/">Apache Spark</a>'s scalable Machine Learning library.</li>
 <li><a href="https://github.com/josephreisinger/vowpal_porpoise">vowpal_porpoise</a> - A lightweight Python wrapper for <a href="https://github.com/JohnLangford/vowpal_wabbit/">Vowpal Wabbit</a>.</li>
 <li><a href="https://github.com/dmlc/xgboost">xgboost</a> - A scalable, portable, and distributed gradient boosting library.</li>
 </ul>
 <h2 id="mapreduce">MapReduce</h2>
 <p><em>Frameworks and libraries for MapReduce.</em></p>
 <ul>
-<li><a href="https://github.com/douban/dpark">dpark</a> - Python clone of Spark, a MapReduce alike framework in Python.</li>
-<li><a href="https://github.com/klbostee/dumbo">dumbo</a> - Python module that allows one to easily write and run Hadoop programs.</li>
+<li><a href="https://pypi.python.org/pypi/pyspark/">PySpark</a> - Apache Spark Python API.</li>
 <li><a href="https://github.com/spotify/luigi">luigi</a> - A module that helps you build complex pipelines of batch jobs.</li>
 <li><a href="https://github.com/Yelp/mrjob">mrjob</a> - Run MapReduce jobs on Hadoop or Amazon Web Services.</li>
-<li><a href="http://spark.apache.org/docs/latest/programming-guide.html">PySpark</a> - The Spark Python API.</li>
 <li><a href="https://github.com/Parsely/streamparse">streamparse</a> - Run Python code against real-time streams of data. Integrates with <a href="http://storm.apache.org/">Apache Storm</a>.</li>
+<li><a href="https://dask.pydata.org/en/latest/">dask</a> - A flexible parallel computing library for analytic computing.</li>
 </ul>
 <h2 id="microsoft-windows">Microsoft Windows</h2>
 <p><em>Python programming on Microsoft Windows.</em></p>
@@ -1072,6 +2232,7 @@
 <h2 id="miscellaneous">Miscellaneous</h2>
 <p><em>Useful libraries or tools that don't fit in the categories above.</em></p>
 <ul>
+<li><a href="https://github.com/python-attrs/attrs">attrs</a> - Replacement for <code>__init__</code>, <code>__eq__</code>, <code>__repr__</code>, etc. boilerplate in class definitions.</li>
 <li><a href="https://github.com/jek/blinker">blinker</a> - A fast Python in-process signal/event dispatching system.</li>
 <li><a href="https://github.com/pallets/itsdangerous">itsdangerous</a> - Various helpers to pass trusted data to untrusted environments.</li>
 <li><a href="https://github.com/mitsuhiko/pluginbase">pluginbase</a> - A simple but flexible plugin system for Python.</li>
@@ -1081,14 +2242,15 @@
 <h2 id="natural-language-processing">Natural Language Processing</h2>
 <p><em>Libraries for working with human languages.</em></p>
 <ul>
+<li><a href="https://github.com/RaRe-Technologies/gensim">gensim</a> - Topic Modelling for Humans.</li>
 <li><a href="https://github.com/fxsjy/jieba">Jieba</a> - Chinese text segmentation.</li>
 <li><a href="https://github.com/saffsd/langid.py">langid.py</a> - Stand-alone language identification system.</li>
 <li><a href="http://www.nltk.org/">NLTK</a> - A leading platform for building Python programs to work with human language data.</li>
 <li><a href="http://www.clips.ua.ac.be/pattern">Pattern</a> - A web mining module for the Python.</li>
+<li><a href="https://github.com/aboSamoor/polyglot">polyglot</a> - Natural language pipeline supporting hundreds of languages.</li>
 <li><a href="https://github.com/isnowfy/snownlp">SnowNLP</a> - A library for processing Chinese text.</li>
 <li><a href="https://spacy.io/">spaCy</a> - A library for industrial-strength natural language processing in Python and Cython.</li>
 <li><a href="https://github.com/sloria/TextBlob">TextBlob</a> - Providing a consistent API for diving into common NLP tasks.</li>
-<li><a href="https://github.com/2shou/TextGrocery">TextGrocery</a> - A simple, efficient short-text classification tool based on LibLinear and Jieba.</li>
 </ul>
 <h2 id="network-virtualization">Network Virtualization</h2>
 <p><em>Tools and libraries for Virtual Networking and SDN (Software Defined Networking).</em></p>
@@ -1107,6 +2269,7 @@
 <li><a href="http://zeromq.github.io/pyzmq/">pyzmq</a> - A Python wrapper for the ZeroMQ message library.</li>
 <li><a href="https://twistedmatrix.com/trac/">Twisted</a> - An event-driven networking engine.</li>
 <li><a href="https://github.com/smira/txZMQ">txZMQ</a> - Twisted based wrapper for the ZeroMQ message library.</li>
+<li><a href="https://github.com/napalm-automation/napalm">NAPALM</a> - Cross-vendor API to manipulate network devices.</li>
 </ul>
 <h2 id="news-feed">News Feed</h2>
 <p><em>Libraries for building user's activities.</em></p>
@@ -1132,15 +2295,15 @@
 </li>
 <li>NoSQL Databases<ul>
 <li><a href="https://github.com/django-nonrel/mongodb-engine">django-mongodb-engine</a> - Django MongoDB Backend.</li>
-<li><a href="https://github.com/mathcamp/flywheel">flywheel</a> - Object mapper for Amazon DynamoDB.</li>
+<li><a href="https://github.com/stevearc/flywheel">flywheel</a> - Object mapper for Amazon DynamoDB.</li>
 <li><a href="https://github.com/stephenmcd/hot-redis">hot-redis</a> - Rich Python data types for Redis.</li>
 <li><a href="http://mongoengine.org/">MongoEngine</a> - A Python Object-Document-Mapper for working with MongoDB.</li>
-<li><a href="https://github.com/jlafon/PynamoDB">PynamoDB</a> - A Pythonic interface for <a href="https://aws.amazon.com/dynamodb/">Amazon DynamoDB</a>.</li>
+<li><a href="https://github.com/pynamodb/PynamoDB">PynamoDB</a> - A Pythonic interface for <a href="https://aws.amazon.com/dynamodb/">Amazon DynamoDB</a>.</li>
 <li><a href="https://github.com/kiddouk/redisco">redisco</a> - A Python Library for Simple Models and Containers Persisted in Redis.</li>
 </ul>
 </li>
 <li>Others<ul>
-<li><a href="https://github.com/Widdershin/butterdb">butterdb</a> - A Python ORM for Google Drive Spreadsheets.</li>
+<li><a href="https://github.com/terrible-ideas/butterdb">butterdb</a> - A Python ORM for Google Drive Spreadsheets.</li>
 <li><a href="https://github.com/pudo/dataset">dataset</a> - A JSON-based database.</li>
 </ul>
 </li>
@@ -1154,7 +2317,7 @@
 </li>
 <li><a href="https://github.com/conda/conda/">conda</a> - Cross-platform, Python-agnostic binary package manager.</li>
 <li><a href="http://clarete.li/curdling/">Curdling</a> - Curdling is a command line tool for managing Python packages.</li>
-<li><a href="https://github.com/nvie/pip-tools">pip-tools</a> - A set of tools to keep your pinned Python dependencies fresh.</li>
+<li><a href="https://github.com/jazzband/pip-tools">pip-tools</a> - A set of tools to keep your pinned Python dependencies fresh.</li>
 <li><a href="http://pythonwheels.com/">wheel</a> - The new standard of Python distribution and are intended to replace eggs.</li>
 </ul>
 <h2 id="package-repositories">Package Repositories</h2>
@@ -1166,7 +2329,7 @@
 </li>
 <li><a href="https://bitbucket.org/pypa/bandersnatch">bandersnatch</a> - PyPI mirroring tool provided by Python Packaging Authority (PyPA).</li>
 <li><a href="http://doc.devpi.net/latest/">devpi</a> - PyPI server and packaging/testing/release tool.</li>
-<li><a href="https://github.com/mvantellingen/localshop">localshop</a> - Local PyPI server (custom packages and auto-mirroring of pypi).</li>
+<li><a href="https://github.com/jazzband/localshop">localshop</a> - Local PyPI server (custom packages and auto-mirroring of pypi).</li>
 </ul>
 <h2 id="permissions">Permissions</h2>
 <p><em>Libraries that allow or deny users access to data or functionality.</em></p>
@@ -1178,8 +2341,8 @@
 <h2 id="processes">Processes</h2>
 <p><em>Libraries for starting and communicating with OS processes.</em></p>
 <ul>
-<li><a href="https://github.com/kennethreitz/envoy">envoy</a> - Python <a href="https://docs.python.org/2/library/subprocess.html">subprocess</a> for Humans™.</li>
-<li><a href="http://sarge.readthedocs.io/">sarge</a> - Yet another wrapper for subprocess.</li>
+<li><a href="https://github.com/kennethreitz/delegator.py">delegator.py</a> - <a href="https://docs.python.org/3.6/library/subprocess.html">Subprocesses</a> for Humans™ 2.0.</li>
+<li><a href="http://sarge.readthedocs.io/en/latest/">sarge</a> - Yet another wrapper for subprocess.</li>
 <li><a href="https://github.com/amoffat/sh">sh</a> - A full-fledged subprocess replacement for Python.</li>
 </ul>
 <h2 id="queue">Queue</h2>
@@ -1191,17 +2354,26 @@
 <li><a href="http://python-rq.org/">rq</a> - Simple job queues for Python.</li>
 <li><a href="https://github.com/rdegges/simpleq">simpleq</a> - A simple, infinitely scalable, Amazon SQS based queue.</li>
 </ul>
+<h2 id="recommender-systems">Recommender Systems</h2>
+<p><em>Libraries for building recommender systems.</em></p>
+<ul>
+<li><a href="https://github.com/spotify/annoy">annoy</a> - Approximate Nearest Neighbors in C++/Python optimized for memory usage.</li>
+<li><a href="https://github.com/ibayer/fastFM">fastFM</a> - A library for Factorization Machines.</li>
+<li><a href="https://github.com/benfred/implicit">implicit</a> - A fast Python implementation of collaborative filtering for implicit datasets.</li>
+<li><a href="https://github.com/guestwalk/libffm">libffm</a> - A library for Field-aware Factorization Machine (FFM).</li>
+<li><a href="https://github.com/lyst/lightfm">LightFM</a> - A Python implementation of a number of popular recommendation algorithms.</li>
+<li><a href="http://surpriselib.com">surprise</a> - A scikit for building and analyzing recommender systems.</li>
+</ul>
 <h2 id="restful-api">RESTful API</h2>
 <p><em>Libraries for developing RESTful APIs.</em></p>
 <ul>
 <li>Django<ul>
-<li><a href="https://github.com/5monkeys/django-formapi">django-formapi</a> - Create JSON APIs with Django's form validation.</li>
 <li><a href="http://www.django-rest-framework.org/">django-rest-framework</a> - A powerful and flexible toolkit to build web APIs.</li>
 <li><a href="http://tastypieapi.org/">django-tastypie</a> - Creating delicious APIs for Django apps.</li>
 </ul>
 </li>
 <li>Flask<ul>
-<li><a href="https://github.com/nicolaiarocci/eve">eve</a> - REST API framework powered by Flask, MongoDB and good intentions.</li>
+<li><a href="https://github.com/pyeve/eve">eve</a> - REST API framework powered by Flask, MongoDB and good intentions.</li>
 <li><a href="https://github.com/marselester/flask-api-utils">flask-api-utils</a> - Taking care of API representation and authentication for Flask.</li>
 <li><a href="http://www.flaskapi.org/">flask-api</a> - Browsable Web APIs for Flask.</li>
 <li><a href="https://github.com/flask-restful/flask-restful">flask-restful</a> - Quickly building REST APIs for Flask.</li>
@@ -1209,7 +2381,7 @@
 </ul>
 </li>
 <li>Pyramid<ul>
-<li><a href="https://github.com/mozilla-services/cornice">cornice</a> - A RESTful framework for Pyramid.</li>
+<li><a href="https://github.com/Cornices/cornice">cornice</a> - A RESTful framework for Pyramid.</li>
 </ul>
 </li>
 <li>Framework agnostic<ul>
@@ -1240,14 +2412,15 @@
 <li><a href="http://nipy.org">NIPY</a> - A collection of neuroimaging toolkits.</li>
 <li><a href="http://www.numpy.org/">NumPy</a> - A fundamental package for scientific computing with Python.</li>
 <li><a href="http://openbabel.org/wiki/Main_Page">Open Babel</a> - A chemical toolbox designed to speak the many languages of chemical data.</li>
-<li><a href="http://obspy.org">ObsPy</a> - A Python toolbox for seismology.</li>
+<li><a href="https://github.com/obspy/obspy/wiki/">ObsPy</a> - A Python toolbox for seismology.</li>
 <li><a href="http://www.pydy.org/">PyDy</a> - Short for Python Dynamics, used to assist with workflow in the modeling of dynamic motion.</li>
 <li><a href="https://github.com/pymc-devs/pymc3">PyMC</a> - Markov Chain Monte Carlo sampling toolkit.</li>
 <li><a href="http://www.rdkit.org/">RDKit</a> - Cheminformatics and Machine Learning Software.</li>
-<li><a href="http://www.scipy.org/">SciPy</a> - A Python-based ecosystem of open-source software for mathematics, science, and engineering.</li>
+<li><a href="https://www.scipy.org/">SciPy</a> - A Python-based ecosystem of open-source software for mathematics, science, and engineering.</li>
 <li><a href="https://github.com/statsmodels/statsmodels">statsmodels</a> - Statistical modeling and econometrics in Python.</li>
 <li><a href="https://github.com/sympy/sympy">SymPy</a> - A Python library for symbolic mathematics.</li>
 <li><a href="https://github.com/quantopian/zipline">Zipline</a> - A Pythonic algorithmic trading library.</li>
+<li><a href="https://bitbucket.org/simpy/simpy">SimPy</a> -  A process-based discrete-event simulation framework.</li>
 </ul>
 <h2 id="search">Search</h2>
 <p><em>Libraries and software for indexing and performing search queries on data.</em></p>
@@ -1255,9 +2428,10 @@
 <li><a href="https://github.com/django-haystack/django-haystack">django-haystack</a> - Modular search for Django.</li>
 <li><a href="https://github.com/elastic/elasticsearch-dsl-py">elasticsearch-dsl-py</a> - The official high-level Python client for Elasticsearch.</li>
 <li><a href="https://www.elastic.co/guide/en/elasticsearch/client/python-api/current/index.html">elasticsearch-py</a> - The official low-level Python client for <a href="https://www.elastic.co/products/elasticsearch">Elasticsearch</a>.</li>
-<li><a href="https://github.com/catholabs/esengine">esengine</a> - ElasticSearch ODM (Object Document Mapper) for Python.</li>
+<li><a href="https://github.com/seek-ai/esengine">esengine</a> - ElasticSearch ODM (Object Document Mapper) for Python.</li>
+<li><a href="https://github.com/django-haystack/pysolr">pysolr</a> - A lightweight Python wrapper for Apache Solr (incl. SolrCloud awareness).</li>
 <li><a href="https://github.com/edsu/solrpy">solrpy</a> - A Python client for <a href="http://lucene.apache.org/solr/">solr</a>.</li>
-<li><a href="http://whoosh.readthedocs.io/">Whoosh</a> - A fast, pure Python search engine library.</li>
+<li><a href="http://whoosh.readthedocs.io/en/latest/">Whoosh</a> - A fast, pure Python search engine library.</li>
 </ul>
 <h2 id="serialization">Serialization</h2>
 <p><em>Libraries for serializing complex data types</em></p>
@@ -1280,13 +2454,13 @@
 </li>
 <li>Office<ul>
 <li><a href="https://github.com/brianray/mm">Marmir</a> - Takes Python data structures and turns them into spreadsheets.</li>
-<li><a href="https://openpyxl.readthedocs.io/">openpyxl</a> - A library for reading and writing Excel 2010 xlsx/xlsm/xltx/xltm files.</li>
+<li><a href="https://openpyxl.readthedocs.io/en/default/">openpyxl</a> - A library for reading and writing Excel 2010 xlsx/xlsm/xltx/xltm files.</li>
 <li><a href="https://github.com/pyexcel/pyexcel">pyexcel</a> - Providing one API for reading, manipulating and writing csv, ods, xls, xlsx and xlsm files.</li>
 <li><a href="https://github.com/python-openxml/python-docx">python-docx</a> - Reads, queries and modifies Microsoft Word 2007/2008 docx files.</li>
 <li><a href="http://relatorio.tryton.org/">relatorio</a> - Templating OpenDocument files.</li>
 <li><a href="https://github.com/dagwieers/unoconv">unoconv</a> - Convert between any document format supported by LibreOffice/OpenOffice.</li>
 <li><a href="https://xlsxwriter.readthedocs.io">XlsxWriter</a> - A Python module for creating Excel .xlsx files.</li>
-<li><a href="http://xlwings.org/">xlwings</a> - A BSD-licensed library that makes it easy to call Python from Excel and vice versa.</li>
+<li><a href="https://www.xlwings.org">xlwings</a> - A BSD-licensed library that makes it easy to call Python from Excel and vice versa.</li>
 <li><a href="https://github.com/python-excel/xlwt">xlwt</a> / <a href="https://github.com/python-excel/xlrd">xlrd</a> - Writing and reading data and formatting information from Excel files.</li>
 </ul>
 </li>
@@ -1317,11 +2491,11 @@
 <h2 id="static-site-generator">Static Site Generator</h2>
 <p><em>Static site generator is a software that takes some text + templates as input and produces HTML files on the output.</em></p>
 <ul>
-<li><a href="https://github.com/koenbok/Cactus/">Cactus</a> - Static site generator for designers.</li>
+<li><a href="https://github.com/eudicots/Cactus">Cactus</a> - Static site generator for designers.</li>
 <li><a href="http://hyde.github.io/">Hyde</a> - Jinja2-based static web site generator.</li>
 <li><a href="https://www.getlektor.com/">Lektor</a> - An easy to use static CMS and blog engine.</li>
 <li><a href="https://www.getnikola.com/">Nikola</a> - A static website and blog generator.</li>
-<li><a href="http://blog.getpelican.com/">Pelican</a> - Uses Markdown or ReST for content and Jinja 2 for themes. Supports DVCS, Disqus. AGPL.</li>
+<li><a href="https://blog.getpelican.com/">Pelican</a> - Uses Markdown or ReST for content and Jinja 2 for themes. Supports DVCS, Disqus. AGPL.</li>
 <li><a href="http://tinkerer.me/">Tinkerer</a> - Tinkerer is a blogging engine/.static website generator powered by Sphinx.</li>
 </ul>
 <h2 id="tagging">Tagging</h2>
@@ -1344,14 +2518,14 @@
 <li><a href="http://nestorsalceda.github.io/mamba/">mamba</a> - The definitive testing tool for Python. Born under the banner of BDD.</li>
 <li><a href="https://github.com/nose-devs/nose">nose</a> - A nicer unittest for Python.</li>
 <li><a href="https://github.com/nose-devs/nose2">nose2</a> - The successor to nose, based on unittest2.</li>
-<li><a href="http://pytest.org/latest/">pytest</a> - A mature full-featured Python testing tool.</li>
+<li><a href="https://docs.pytest.org/latest/">pytest</a> - A mature full-featured Python testing tool.</li>
 <li><a href="https://github.com/robotframework/robotframework">Robot Framework</a> - A generic test automation framework.</li>
 <li><a href="https://docs.python.org/2/library/unittest.html">unittest</a> - (Python standard library) Unit testing framework.</li>
 </ul>
 </li>
 <li>Test Runners<ul>
 <li><a href="https://github.com/CleanCut/green">green</a> - A clean, colorful test runner.</li>
-<li><a href="https://tox.readthedocs.io/">tox</a> - Auto builds and tests distributions in multiple Python versions</li>
+<li><a href="https://tox.readthedocs.io/en/latest/">tox</a> - Auto builds and tests distributions in multiple Python versions</li>
 </ul>
 </li>
 <li>GUI / Web Testing<ul>
@@ -1373,7 +2547,7 @@
 </ul>
 </li>
 <li>Object Factories<ul>
-<li><a href="https://github.com/rbarrois/factory_boy">factory_boy</a> - A test fixtures replacement for Python.</li>
+<li><a href="https://github.com/FactoryBoy/factory_boy">factory_boy</a> - A test fixtures replacement for Python.</li>
 <li><a href="https://github.com/klen/mixer">mixer</a> - Another fixtures replacement. Supported Django, Flask, SQLAlchemy, Peewee and etc.</li>
 <li><a href="https://github.com/vandersonmota/model_mommy">model_mommy</a> - Creating random fixtures for testing in Django.</li>
 </ul>
@@ -1383,7 +2557,7 @@
 </ul>
 </li>
 <li>Fake Data<ul>
-<li><a href="https://github.com/lk-geimfari/church">church</a> - is a Python library that help you generate fake data.</li>
+<li><a href="https://github.com/lk-geimfari/mimesis">mimesis</a> - is a Python library that help you generate fake data.</li>
 <li><a href="https://github.com/emirozer/fake2db">fake2db</a> - Fake database generator.</li>
 <li><a href="https://github.com/joke2k/faker">faker</a> - A Python package that generates fake data.</li>
 <li><a href="https://pypi.python.org/pypi/radar">radar</a> - Generate random datetime / time.</li>
@@ -1405,7 +2579,8 @@
 <li><a href="https://github.com/ztane/python-Levenshtein/">Levenshtein</a> - Fast computation of Levenshtein distance and string similarity.</li>
 <li><a href="https://github.com/vinta/pangu.py">pangu.py</a> - Spacing texts for CJK and alphanumerics.</li>
 <li><a href="https://github.com/pwaller/pyfiglet">pyfiglet</a> - An implementation of figlet written in Python.</li>
-<li><a href="https://github.com/stochastic-technologies/shortuuid">shortuuid</a> - A generator library for concise, unambiguous and URL-safe UUIDs.</li>
+<li><a href="https://github.com/mozillazg/python-pinyin">pypinyin</a> - Convert Chinese hanzi to pinyin.</li>
+<li><a href="https://github.com/skorokithakis/shortuuid">shortuuid</a> - A generator library for concise, unambiguous and URL-safe UUIDs.</li>
 <li><a href="https://pypi.python.org/pypi/Unidecode">unidecode</a> - ASCII transliterations of Unicode text.</li>
 <li><a href="https://github.com/moskytw/uniout">uniout</a> - Print readable chars instead of the escaped string.</li>
 <li><a href="https://github.com/lxneng/xpinyin">xpinyin</a> - A library to translate Chinese hanzi (漢字) to pinyin (拼音).</li>
@@ -1421,7 +2596,7 @@
 <li><a href="https://github.com/daviddrysdale/python-phonenumbers">phonenumbers</a> - Parsing, formatting, storing and validating international phone numbers.</li>
 <li><a href="http://www.dabeaz.com/ply/">PLY</a> - Implementation of lex and yacc parsing tools for Python</li>
 <li><a href="http://pygments.org/">Pygments</a> - A generic syntax highlighter.</li>
-<li><a href="http://pyparsing.wikispaces.com/">pyparsing</a> - A general purpose framework for generating parsers.</li>
+<li><a href="https://session.wikispaces.com/1/auth/auth?authToken=04a694af95b643a06fcf5716ded01a5f3">pyparsing</a> - A general purpose framework for generating parsers.</li>
 <li><a href="https://github.com/derek73/python-nameparser">python-nameparser</a> - Parsing human names into their individual components.</li>
 <li><a href="https://github.com/selwin/python-user-agents">python-user-agents</a> - Browser user agent parser.</li>
 <li><a href="https://github.com/andialbrecht/sqlparse">sqlparse</a> - A non-validating SQL parser.</li>
@@ -1433,7 +2608,7 @@
 <ul>
 <li><a href="https://libcloud.apache.org/">apache-libcloud</a> - One Python library for all clouds.</li>
 <li><a href="https://github.com/boto/boto3">boto3</a> - Python interface to Amazon Web Services.</li>
-<li><a href="https://github.com/sunlightlabs/django-wordpress/">django-wordpress</a> - WordPress models and views for Django.</li>
+<li><a href="https://github.com/istrategylabs/django-wordpress">django-wordpress</a> - WordPress models and views for Django.</li>
 <li><a href="https://github.com/mobolic/facebook-sdk">facebook-sdk</a> - Facebook Platform Python SDK.</li>
 <li><a href="https://github.com/jgorset/facepy">facepy</a> - Facepy makes it really easy to interact with Facebook's Graph API</li>
 <li><a href="https://github.com/charlierguo/gmail">gmail</a> - A Pythonic interface for Gmail.</li>
@@ -1464,10 +2639,10 @@
 <li><a href="https://pypi.python.org/pypi/gunicorn">gunicorn</a> - Pre-forked, partly written in C.</li>
 <li><a href="https://pypi.python.org/pypi/meinheld">meinheld</a> - Asynchronous, partly written in C.</li>
 <li><a href="https://github.com/hivesolutions/netius">netius</a> - Asynchronous, very fast.</li>
-<li><a href="http://pythonpaste.org/">paste</a> - Multi-threaded, stable, tried and tested.</li>
+<li><a href="https://web.archive.org/web/http%3A//pythonpaste.org/">paste</a> - Multi-threaded, stable, tried and tested.</li>
 <li><a href="https://pypi.python.org/pypi/rocket">rocket</a> - Multi-threaded.</li>
-<li><a href="https://uwsgi-docs.readthedocs.io/">uWSGI</a> - A project aims at developing a full stack for building hosting services, written in C.</li>
-<li><a href="https://waitress.readthedocs.io/">waitress</a> - Multi-threaded, powers Pyramid.</li>
+<li><a href="https://uwsgi-docs.readthedocs.io/en/latest/">uWSGI</a> - A project aims at developing a full stack for building hosting services, written in C.</li>
+<li><a href="https://waitress.readthedocs.io/en/latest/">waitress</a> - Multi-threaded, powers Pyramid.</li>
 <li><a href="http://werkzeug.pocoo.org/">Werkzeug</a> - A WSGI utility library for Python that powers Flask and can easily be embedded into your own projects.</li>
 </ul>
 <h2 id="web-content-extracting">Web Content Extracting</h2>
@@ -1496,13 +2671,13 @@
 <li><a href="https://github.com/scrapinghub/portia">portia</a> - Visual scraping for Scrapy.</li>
 <li><a href="https://github.com/binux/pyspider">pyspider</a> - A powerful spider system.</li>
 <li><a href="https://github.com/jmcarp/robobrowser">RoboBrowser</a> - A simple, Pythonic library for browsing the web without a standalone web browser.</li>
-<li><a href="http://scrapy.org/">Scrapy</a> - A fast high-level screen scraping and web crawling framework.</li>
+<li><a href="https://scrapy.org/">Scrapy</a> - A fast high-level screen scraping and web crawling framework.</li>
 </ul>
 <h2 id="web-frameworks">Web Frameworks</h2>
 <p><em>Full stack web frameworks.</em></p>
 <ul>
 <li><a href="http://bottlepy.org/docs/dev/index.html">Bottle</a> - A fast, simple and lightweight WSGI micro web-framework.</li>
-<li><a href="http://www.cherrypy.org/">CherryPy</a> - A minimalist Python web framework, HTTP/1.1-compliant and WSGI thread-pooled.</li>
+<li><a href="http://cherrypy.org/">CherryPy</a> - A minimalist Python web framework, HTTP/1.1-compliant and WSGI thread-pooled.</li>
 <li><a href="https://www.djangoproject.com/">Django</a> - The most popular web framework in Python.<ul>
 <li><a href="https://github.com/rosarior/awesome-django">awesome-django</a></li>
 </ul>
@@ -1511,7 +2686,7 @@
 <li><a href="https://github.com/humiaozuzu/awesome-flask">awesome-flask</a></li>
 </ul>
 </li>
-<li><a href="http://www.pylonsproject.org/">Pyramid</a> - A small, fast, down-to-earth, open source Python web framework.<ul>
+<li><a href="https://pylonsproject.org/">Pyramid</a> - A small, fast, down-to-earth, open source Python web framework.<ul>
 <li><a href="https://github.com/uralbash/awesome-pyramid">awesome-pyramid</a></li>
 </ul>
 </li>
@@ -1539,7 +2714,7 @@
 <li><a href="https://circleci.com/">CircleCI</a> - A CI service that can run very fast parallel testing. (GitHub only)</li>
 <li><a href="https://travis-ci.org">Travis CI</a> - A popular CI service for your open source and <a href="https://travis-ci.com">private</a> projects. (GitHub only)</li>
 <li><a href="https://vexor.io">Vexor CI</a> - A continuous integration tool for private apps with pay-per-minute billing model.</li>
-<li><a href="http://wercker.com/">Wercker</a> - A Docker-based platform for building and deploying applications and microservices.</li>
+<li><a href="http://www.wercker.com/">Wercker</a> - A Docker-based platform for building and deploying applications and microservices.</li>
 </ul>
 <h2 id="code-quality">Code Quality</h2>
 <ul>
@@ -1552,7 +2727,7 @@
 <p>Where to discover new Python libraries.</p>
 <h2 id="podcasts">Podcasts</h2>
 <ul>
-<li><a href="http://podcastinit.com/">Podcast.init</a></li>
+<li><a href="https://podcastinit.com/">Podcast.init</a></li>
 <li><a href="https://talkpython.fm/">Talk Python To Me</a></li>
 <li><a href="https://pythonbytes.fm">Python Bytes</a></li>
 </ul>
@@ -1572,19 +2747,19 @@
 <ul>
 <li><a href="https://www.reddit.com/r/coolgithubprojects/">/r/CoolGithubProjects</a></li>
 <li><a href="https://www.reddit.com/r/python">/r/Python</a></li>
-<li><a href="http://python.libhunt.com">Awesome Python @LibHunt</a></li>
-<li><a href="https://www.djangopackages.com/">Django Packages</a></li>
+<li><a href="https://python.libhunt.com/">Awesome Python @LibHunt</a></li>
+<li><a href="https://djangopackages.org/">Django Packages</a></li>
 <li><a href="https://www.fullstackpython.com/">Full Stack Python</a></li>
 <li><a href="http://pypi-ranking.info/alltime">PyPI Ranking</a></li>
 <li><a href="http://python3wos.appspot.com/">Python 3 Wall of Superpowers</a></li>
-<li><a href="http://pythonhackers.com/open-source/">Python Hackers</a></li>
+<li><a href="http://www.oss.io/open-source/">Python Hackers</a></li>
 <li><a href="https://python.zeef.com/alan.richmond">Python ZEEF</a></li>
-<li><a href="http://python.ctolib.com">Python 开发社区</a></li>
+<li><a href="https://www.ctolib.com/python/">Python 开发社区</a></li>
 <li><a href="https://github.com/trending?l=python">Trending Python repositories on GitHub today</a></li>
 </ul>
 <h2 id="weekly">Weekly</h2>
 <ul>
-<li><a href="http://weekly.codetengu.com/">CodeTengu Weekly</a></li>
+<li><a href="https://weekly.codetengu.com/">CodeTengu Weekly</a></li>
 <li><a href="http://importpython.com/newsletter/">Import Python Newsletter</a></li>
 <li><a href="http://pycoders.com/">Pycoder's Weekly</a></li>
 <li><a href="http://www.pythonweekly.com/">Python Weekly</a></li>
@@ -1608,45 +2783,63 @@
 </ul>
 <h1 id="contributing">Contributing</h1>
 <p>Your contributions are always welcome! Please take a look at the <a href="https://github.com/vinta/awesome-python/blob/master/CONTRIBUTING.md">contribution guidelines</a> first.</p>
-<p>I will keep some pull requests open if I'm not sure whether those libraries are awesome, you could <a href="https://github.com/vinta/awesome-python/pulls">vote for them</a> by adding :+1: to them. Pull requests will be merged when their votes reach <strong>20</strong>.</p></div>
+<p>I will keep some pull requests open if I'm not sure whether those libraries are awesome, you could <a href="https://github.com/vinta/awesome-python/pulls">vote for them</a> by adding :+1: to them. Pull requests will be merged when their votes reach <strong>20</strong>.</p>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
         </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/vinta" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/vinta" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://www.linkedin.com/in/vinta" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
 
-        <footer class="col-md-12">
-            <hr>
-            
-            <center>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</center>
-        </footer>
-
-        <script src="./js/jquery-1.10.2.min.js"></script>
-        <script src="./js/bootstrap-3.0.3.min.js"></script>
-        <script src="./js/highlight.pack.js"></script>
-        <script>var base_url = '.';</script>
-        <script data-main="./mkdocs/js/search.js" src="./mkdocs/js/require.js"></script>
-        <script src="./js/base.js"></script>
-
-        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                        <h4 class="modal-title" id="exampleModalLabel">Search</h4>
-                    </div>
-                    <div class="modal-body">
-                        <p>
-                            From here you can search these documents. Enter
-                            your search terms below.
-                        </p>
-                        <form role="form">
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
-                            </div>
-                        </form>
-                        <div id="mkdocs-search-results"></div>
-                    </div>
-                    <div class="modal-footer">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </body>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="./assets/javascripts/application-946997f430.js"></script>
+      
+      
+      <script>app.initialize({version:"0.16.3",url:{base:"."}})</script>
+      
+    
+    
+      
+      <script>!function(e,t,a,n,o,c,i){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,c=t.createElement(a),i=t.getElementsByTagName(a)[0],c.async=1,c.src=n,i.parentNode.insertBefore(c,i)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-510626-7","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var t=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",t,e.href)})});var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})</script>
+      
+    
+  </body>
 </html>
